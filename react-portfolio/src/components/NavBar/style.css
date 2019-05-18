@@ -1,0 +1,14 @@
+nav.navbar.navbar-default {
+    margin-bottom: 0;
+    
+  }
+
+  nav{
+    background-image: radial-gradient(white 5%, darkblue 15%, darkblue 60%)
+  }
+
+  .nav-item{
+     position: relative;
+     left: 700px;
+     padding: 10px;
+  }

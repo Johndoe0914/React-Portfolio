@@ -1,0 +1,67 @@
+.AboutMe {
+    position: relative;
+   text-align: left;
+   font-size: 20px;
+   padding-top: 50px;
+   font-family: 'Alegreya Sans SC', sans-serif;
+   
+
+}
+.profileStuff {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: lightskyblue;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    height: auto;
+    width: 100%;
+
+}
+.parallax {
+    position: relative;
+    background-image: url(https://image.shutterstock.com/image-vector/man-sitting-on-big-laptop-260nw-753972046.jpg);
+    background-size: cover;
+     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    width: 100%;
+    height: 400px;
+}
+.Badges {
+    padding: 40px;
+}
+
+.profileOffer {
+    position: relative;
+    margin-top: 100px;
+    background-color: blueviolet;
+    color: white;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    font-size: 20px;
+    padding: 50px;
+    text-align: left;
+    width: 100%;
+    height: auto;
+
+}
+.contactWrapper {
+    position: relative;
+    background-color: crimson;
+    height: auto;
+    width: 100%;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+.contactForm {
+    position: relative;
+    padding: 20px;
+}
+
+
+@media screen and (min-width: 480px) {
+  
+    
+  }
