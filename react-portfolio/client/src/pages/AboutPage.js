@@ -11,7 +11,11 @@ export default class AboutPage extends React.Component {
         super(props)
         
         this.state = {
-           gif: ""
+           gif: "",
+           firstname: "",
+           lastname: "",
+           subject: "",
+           message: ""
 
         }
     }
@@ -28,6 +32,22 @@ export default class AboutPage extends React.Component {
         })
         .catch(err => {
             console.log(err)
+        })
+    }
+    handleChange = (e) => {
+        this.setState({[e.target.name]: e.target.value })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        const { firstname, lastname, subject, message} = this.state;
+
+        const form = axios.post("/api/form", {
+            firstname,
+            lastname,
+            subject,
+            message
         })
     }
 
@@ -102,28 +122,28 @@ export default class AboutPage extends React.Component {
                 </Col>
                 <Col size="md-6">
                 <div className="contactForm">
-             <Form>
+             <Form onSubmit={this.handleSubmit}>
             <Form.Row>
                 <Form.Group style={{ marginRight:"10px"}} controlId="formGridFirstName">
                 <Form.Label>First Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter First Name" />
+                <Form.Control type="text"  onChange={this.handleChange} name="firstname"  placeholder="Enter First Name" />
                 </Form.Group>
 
                 <Form.Group  controlId="formGridLastName">
                 <Form.Label>Last Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter Last Name" />
+                <Form.Control type="text"  onChange={this.handleChange} name="lastname" value={this.state.lastname} placeholder="Enter Last Name" />
                 </Form.Group>
             </Form.Row>
 
             <Form.Group controlId="formGridSubject">
                 <Form.Label>Subject</Form.Label>
-                <Form.Control style={{width:"400px"}} placeholder="Enter subject" />
+                <Form.Control style={{width:"400px"}}  onChange={this.handleChange}value={this.state.subject} name="subject" placeholder="Enter subject" />
             </Form.Group>
 
             <Form.Group controlId="formGridSubjectDetails">
                 <Form.Label>Subject Details</Form.Label>
                 <br />
-                <textarea rows="5" cols="70"></textarea> 
+                <textarea name="message" onChange={this.handleChange} value={this.state.message} rows="5" cols="70"></textarea> 
             </Form.Group>
 
 
