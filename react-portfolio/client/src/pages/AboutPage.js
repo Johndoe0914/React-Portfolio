@@ -49,6 +49,8 @@ export default class AboutPage extends React.Component {
             subject,
             message
         })
+
+        this.setState({ firstname:"", lastname:"",subject:"",message:""})
     }
 
     render() {
