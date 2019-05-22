@@ -7,7 +7,22 @@ import Portfolio from "./pages/PortfolioPage";
 //import NoMatch from "./pages/NoMatch";
 import './App.css';
 
-function App() {
+class App extends React.Component() {
+  constructor(props){
+    super(props)
+
+    this.state = {}
+    this.connecToServer = this.connecToServer.bind(this);
+  }
+
+  connecToServer() {
+    fetch('/');
+  }
+
+  componentDidMount() {
+    this.connecToServer();
+  }
+  render(){
   return (
   <Router>
     <Switch>
@@ -25,7 +40,7 @@ function App() {
    
 
   </Router>
-  );
+  )};
 }
 
 export default App;

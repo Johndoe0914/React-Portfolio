@@ -53,6 +53,8 @@ app.post("/api/form", (req,res) => {
 })
 
 const PORT = process.env.PORT || 5000;
+//Static file declaration
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.listen(PORT, () => {
     console.log("server listening on http://localhost:5000")
