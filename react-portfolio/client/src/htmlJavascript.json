@@ -1,0 +1,45 @@
+[
+    {
+        "projectName": "Friend Finder",
+        "projectImage": "http://www.clipartroo.com/images/64/refer-a-friend-clipart-64065.png",
+        "projectDescription": "10 question questionaiire, that will match you up with someone with similar score",
+        "projectGitUrl": "https://github.com/Johndoe0914/Friend-Finder",
+        "projectUrl": ""
+        },
+        {
+            "projectName": "Crystal Collector",
+            "projectImage": "https://gamepedia.cursecdn.com/paladins_gamepedia/thumb/a/a5/DailyReward_e.png/200px-DailyReward_e.png?version=9635fb7b3d8e131e75d9e21b824f9c0d",
+            "projectDescription": "Each crystal is assigned random value and you have to try to match it with the number shown",
+            "projectGitUrl": "https://github.com/Johndoe0914/unit-4-game",
+            "projectUrl": "https://johndoe0914.github.io/unit-4-game/"
+        },
+        {
+            "projectName": "Train Time",
+            "projectImage": "https://www.gannett-cdn.com/-mm-/a358810f8f5cc6c55332c4dedb241a54213163cb/c=433-0-2568-2135/local/-/media/2015/06/02/USATODAY/USATODAY/635688521346939613-AP-Amtrak-Vermonter.jpg?width=200&height=200&fit=crop",
+            "projectDescription": "User can add new train wit time and frequency and calculates minutes away ",
+            "projectGitUrl": "https://github.com/Johndoe0914/Train-Time",
+            "projectUrl": "https://johndoe0914.github.io/Train-Time/"
+         },
+         {
+            "projectName": "Psychic Game",
+            "projectImage": "https://shamanschool.com/wp-content/uploads/2013/07/bigstock-Crystal-Ball-45663364-EDIT200.jpg",
+            "projectDescription": "Player has to guess what letter the computer is guessing ",
+            "projectGitUrl": "https://github.com/Johndoe0914/Psychic-Game",
+            "projectUrl": "https://johndoe0914.github.io/Psychic-Game/"
+            },
+            {
+                "projectName": "Trivia Game",
+                "projectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHFLoRv2PrLY2BWDuoFykJ69DewsgZluWiqXyVQztVLU1qDTg6",
+                "projectDescription": "Player has to guess the correct answer to the questions ",
+                "projectGitUrl": "https://github.com/Johndoe0914/TriviaGame",
+                "projectUrl": "https://johndoe0914.github.io/TriviaGame/"
+                },
+                {
+                    "projectName": "Giphy",
+                    "projectImage": "https://media.licdn.com/dms/image/C4D0BAQF5jU7Klf6xQA/company-logo_200_200/0?e=2159024400&v=beta&t=lbJWdtqP6MYbQUuNAnvp6IuGBvShu7pau4xFPdtND90",
+                    "projectDescription": "Loads gifs and able to add new gif buttons",
+                    "projectGitUrl": "https://github.com/Johndoe0914/GIfphy",
+                    "projectUrl": "https://johndoe0914.github.io/GIfphy/"
+                    }
+
+]

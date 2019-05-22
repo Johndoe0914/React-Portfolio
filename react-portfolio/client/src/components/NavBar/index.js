@@ -6,9 +6,9 @@ import "./style.css";
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
   return (
-    <nav  className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav  className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ fontFamily: "'VT323', monospace"}}>
       <Link className="navbar-brand" to="/">
-        Jonathan Diaz
+        <h3 style={{ paddingLeft:"100px"}}>Jonathan Diaz</h3>
       </Link>
       <div>
         <ul className="navbar-nav">

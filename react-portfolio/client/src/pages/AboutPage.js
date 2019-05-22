@@ -69,10 +69,10 @@ export default class AboutPage extends React.Component {
                 </Col>
                 <Col size="md-8">
                 <div className="AboutMe">
-                <h1 style={{paddingLeft:"20px"}}>Welcome , here is a little about me </h1>
+                <h1 style={{paddingLeft:"20px", fontFamily: "'VT323', monospace"}}>Welcome , here is a little about me </h1>
                 <hr />
                
-               <p style={{padding:"30px", fontSize:"x-large", fontFamily: "'VT323', monospace"}}>My name is Jonathan Diaz i am 19 years old,i am a UCF Coding bootcamp graduate .I currently reside in Kissimmee, Florida. I am a young motivated individual who wants to strive in everything he does. I would describe myself as being a proactive ,dynamic and a team player. I consider myself these things because during the coding bootcamp projects i made sure to get my part of the project completed as soon as i could so that we could revise. I love coming up with new ideas and seeing them come to life. I am always seeking to expand on my current knowledge base . Feel free to email me down below ! </p>
+               <p style={{padding:"30px", fontSize:"x-large", fontFamily: "'VT323', monospace"}}>My name is Jonathan Diaz i am 19 years old,i am a UCF Coding bootcamp graduate .I currently reside in Kissimmee, Florida. I am a young motivated individual who wants to strive in everything he does. I would describe myself as being a proactive ,dynamic and a team player. I consider myself these things because during the coding bootcamp projects i made sure to get my part of the project completed as soon as i could so that we could revise and so we can help each other out. I love coming up with new ideas and seeing them come to life. I am always seeking to expand on my current knowledge base . Feel free to email me down below ! </p>
           
                 </div>
                 </Col>
@@ -158,6 +158,19 @@ export default class AboutPage extends React.Component {
                 </Col>
             </Row>
             </div>
+            <footer style={{ marginBottom:"0px", width:"100%", height:"150px", backgroundColor:"black", color:"white",  boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}>
+                <Row>
+                  <Col size="md-8">
+                   <h6 style={{ marginLeft:"300px", marginTop:"30px"}}>Copyright @ 2019</h6>
+                  </Col>
+                  <Col size="md-4">
+                    <ul style={{ listStyle:"none",}}>
+                      <li><a href="https://github.com/Johndoe0914"><img style={{ display:"inline-block", height:"40px", color:"white", marginTop:"30px"}} src="https://upload.wikimedia.org/wikipedia/commons/5/54/GitHub_Logo.png" /></a></li>
+                      <li><a href="https://www.linkedin.com/in/jonathan-diaz-46a7ba15b/"><img style={{ display:"inline-block", height:"40px", color:"white"}} src="http://chittagongit.com/download/88343" /></a></li>
+                    </ul>
+                  </Col>
+                </Row>
+              </footer>
             </Container>
         )
     }

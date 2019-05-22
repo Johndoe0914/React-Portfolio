@@ -4,7 +4,7 @@ nav.navbar.navbar-default {
   }
 
   nav{
-    background-image: radial-gradient(white 5%, darkblue 15%, darkblue 60%)
+    background-image: radial-gradient(white 5%, darkblue 15%, black 60%)
   }
 
   .nav-item{

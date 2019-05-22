@@ -1,0 +1,16 @@
+[
+    {
+        "projectName": "Bamazon",
+        "projectImage": "https://e-cdns-images.dzcdn.net/images/cover/dc9d83e7b7982d2ed1524d8cf578d4d7/200x200-000000-80-0-0.jpg",
+        "projectDescription": "Node command line store front",
+        "projectGitUrl": "https://github.com/Johndoe0914/bamazon",
+        "projectUrl": "https://github.com/Johndoe0914/bamazon"
+        },
+        {
+            "projectName": "Liri Node app",
+            "projectImage": "https://e-cdns-images.dzcdn.net/images/cover/dc9d83e7b7982d2ed1524d8cf578d4d7/200x200-000000-80-0-0.jpg",
+            "projectDescription": "Command line node app using 3 different api's, user can search for spotify song, search Artist thru concert-this, and movies with omdb. ",
+            "projectGitUrl": "https://github.com/Johndoe0914/Liri-node-app",
+            "projectUrl": "https://github.com/Johndoe0914/Liri-node-app"
+        }
+    ]

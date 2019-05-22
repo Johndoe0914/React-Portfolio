@@ -22,7 +22,7 @@ export default class LandingPage extends React.Component {
                
                 <div className="Wrapper">
                 
-                <div className="Text">
+                <div className="Text" style={{ fontFamily: "'VT323', monospace"}}>
                     <strong><h1>Welcome Stranger,</h1></strong>
                     <br />
                     <strong><h1>My name is Jonathan Diaz</h1></strong>
