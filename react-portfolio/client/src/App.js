@@ -7,40 +7,34 @@ import Portfolio from "./pages/PortfolioPage";
 //import NoMatch from "./pages/NoMatch";
 import './App.css';
 
-class App extends React.Component() {
-  constructor(props){
-    super(props)
-
-    this.state = {}
-    this.connecToServer = this.connecToServer.bind(this);
-  }
-
-  connecToServer() {
-    fetch('/');
-  }
-
-  componentDidMount() {
-    this.connecToServer();
-  }
+export default class App extends React.Component{
   render(){
-  return (
-  <Router>
-    <Switch>
-    <Route exact path ="/" component={LandingPage} />
-    </Switch>
-    <Navbar />
-    <Switch>
+    return (
+    <Router>
+      <Switch>
+      <Route exact path ="/" component={LandingPage} />
+      </Switch>
+      <Navbar />
+      <Switch>
+       
+      
+      <Route exact path ="/about" component={About} />
+      <Route exact path = "/portfolio" component={Portfolio} />
+      {/* <Route exact path = "/contact" component={Contact} />
+      <Route component={NoMatch} />  */}
+      </Switch>
      
-    
-    <Route exact path ="/about" component={About} />
-    <Route exact path = "/portfolio" component={Portfolio} />
-    {/* <Route exact path = "/contact" component={Contact} />
-    <Route component={NoMatch} />  */}
-    </Switch>
-   
+  
+    </Router>
+    )};
 
-  </Router>
-  )};
 }
 
-export default App;
+  
+
+
+  
+  
+
+
+
