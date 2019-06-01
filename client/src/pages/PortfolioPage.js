@@ -48,10 +48,10 @@ export default class Portfolio extends React.Component {
     render() {
         return (
           <Container fluid>
-              <div style={{marginTop:"100px", padding:"20px"}} className="buttons">
+              <div style={{marginTop:"100px", padding:"20px", }} className="buttons">
                 <Row>
                     <Col size="md-12">
-                    <center style={{ fontFamily: "'VT323', monospace"}}> <Button onClick={this.handleHtml}variant="outline-warning">HTML/Javascript</Button><Button onClick={this.handleNode} variant="outline-info">Node</Button> <Button onClick={this.handleReact} variant="outline-danger">React</Button> </center>
+                    <center style={{ fontFamily: "'VT323', monospace"}}> <Button onClick={this.handleHtml}variant="outline-warning">HTML/Javascript</Button>     <Button onClick={this.handleNode} variant="outline-dark">Node</Button>   <Button onClick={this.handleReact} variant="outline-danger">React</Button> </center>
                         <br />
                                    <center style={{ color:"white", fontFamily: "'VT323', monospace"}}> {this.state.htmlVisible ? <h2>Html and javascript Projects</h2> : null}
                         
@@ -64,7 +64,7 @@ export default class Portfolio extends React.Component {
               </div>
 
 
-              <div style={{position:"relative", margin:"auto", marginTop:"100px",marginBottom:"200px",width:"900px",  boxShadow: "0 3px 6px #999, 0 3px 6px #999", }}className="projectDisplay">
+              <div style={{position:"relative", margin:"auto", marginTop:"100px",marginBottom:"200px",width:"900px",  boxShadow:" 0 3px 6px black, 0 3px 6px black" }}className="projectDisplay">
                   <Row>
                       <Col size="md-12">
                          {this.state.htmlVisible ?   <ProjectCarousel projects={htmlJs} />: null} 

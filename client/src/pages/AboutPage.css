@@ -12,7 +12,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     background-color: lightskyblue;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    box-shadow: 0 3px 6px black, 0 3px 6px black;
     height: auto;
     width: 100%;
 
@@ -24,7 +24,7 @@
      background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    box-shadow: 0 3px 6px black, 0 3px 6px black;
     width: 100%;
     height: 400px;
 }
@@ -35,9 +35,9 @@
 .profileOffer {
     position: relative;
     margin-top: 100px;
-    background-color: blueviolet;
+    background-color: black;
     color: white;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    box-shadow: 0 3px 6px black, 0 3px 6px black;
     font-size: 20px;
     padding: 50px;
     text-align: left;
@@ -53,7 +53,8 @@
     color: white;
     margin-top: 30px;
     margin-bottom: 50px;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    box-shadow: 0 3px 6px black, 0 3px 6px black;
+    
 }
 .contactForm {
     position: relative;

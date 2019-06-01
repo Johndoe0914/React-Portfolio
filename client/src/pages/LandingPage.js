@@ -14,14 +14,14 @@ export default class LandingPage extends React.Component {
 
             }
         }
-
-     
-
+        
+        
+       
         render() {
             return (
                
                 <div className="Wrapper">
-                
+                <div className="overlay"></div>
                 <div className="Text" style={{ fontFamily: "'VT323', monospace"}}>
                     <strong><h1>Welcome Stranger,</h1></strong>
                     <br />

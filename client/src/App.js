@@ -11,12 +11,10 @@ export default class App extends React.Component{
   render(){
     return (
     <Router>
-      <Switch>
-      <Route exact path ="/" component={LandingPage} />
-      </Switch>
       <Navbar />
       <Switch>
-       
+      
+      <Route exact path ="/" component={LandingPage} />
       
       <Route exact path ="/about" component={About} />
       <Route exact path = "/portfolio" component={Portfolio} />

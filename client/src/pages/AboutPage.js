@@ -100,14 +100,14 @@ export default class AboutPage extends React.Component {
                 </div>
                 <div className="Badges">
                <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" />
-               <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://banner2.kisspng.com/20180513/iyq/kisspng-cascading-style-sheets-css3-logo-html-5af803eb813e47.1360807815262033715294.jpg" />
+               <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://fuzati.com/wp-content/uploads/2016/12/CSS-Logo.png" />
                <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="http://pluspng.com/img-png/logo-javascript-png-html-code-allows-to-embed-javascript-logo-in-your-website-587.png" />
-               <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://i.dlpng.com/static/png/427165_thumb.png" />
+               <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" />
                <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="http://www.logospng.com/images/68/image-logo-in-bootstrap-68447.png" />
-               <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://zdnet3.cbsistatic.com/hub/i/r/2018/02/16/8abdb3e1-47bc-446e-9871-c4e11a46f680/resize/470xauto/2ea638bf5532abe5081dabb0fbecbc2d/mongo-db-logo.png" />
+               <img style={{display:"inline-block", height:"80px", margin:"30px"}}alt="htmlbadge" src="http://pluspng.com/img-png/mongodb-png-read-only-views-in-mongodb-3-4-413.png" />
                <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://pngimg.com/uploads/mysql/mysql_PNG1.png" />
                <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://miro.medium.com/max/480/1*To2H39eauxaeYxYMtV1afQ.png" />
-               <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://www.ateamindia.com/wp-content/uploads/2019/03/main-qimg-f406db5658b5d0dade4d70a989560439.png" />
+               <img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://rishabh.io/recipes/img/004-express-js.png" />
                </div>
             </Col>
             </Row>
