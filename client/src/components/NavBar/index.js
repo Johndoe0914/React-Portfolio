@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav  className="navbar navbar-expand-lg navbar-dark bg-black" style={{ fontFamily: "'VT323', monospace"}}>
       <Link className="navbar-brand" to="/">
-        <h3 style={{ paddingLeft:"100px"}}>Jonathan Diaz</h3>
+        {/* <h3 style={{ paddingLeft:"100px"}}>Jonathan Diaz</h3> */}
       </Link>
       <div>
         <ul className="navbar-nav">

@@ -11,7 +11,7 @@ export default class App extends React.Component{
   render(){
     return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
       
       <Route exact path ="/" component={LandingPage} />
