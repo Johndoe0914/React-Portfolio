@@ -38,3 +38,78 @@
   position: relative;
   margin-top: 600px;
 }
+.AboutWrapper {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  background-color: cadetblue;
+}
+.aboutHeading {
+  position: relative;
+  text-align: center;
+  top: 200px;
+}
+.aboutMe {
+  position: relative;
+  width:1000px;
+  height: 800px;
+  background-color: white;
+  margin:  400px auto;
+  border-style: ridge;
+  border-color: darkblue;
+ 
+}
+.aboutPic {
+
+}
+#AboutPic {
+  display:inline-block ;
+  margin: 45px;
+  border-Radius: 300px;
+  height: 300px ;
+  box-Shadow: 0 3px 6px #999 0 3px 6px #999;
+  background-image: url("/images/myimage.jpeg");
+}
+
+.aboutDesc {
+
+  
+}
+
+.projectsWrapper {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  margin-top: 600px;
+  
+}
+
+.projectHeading {
+  text-align: center;
+  color: white;
+  
+
+}
+
+.myOfferWrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-color: white;
+  
+}
+
+.offerHeading {
+  text-align: center;
+}
+
+.contactWrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: yellow;
+}
+
+.contactHeading {
+  text-align: center;
+}
