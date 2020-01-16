@@ -2,7 +2,11 @@ import React from "react";
 import { Container, Col , Row } from "../components/Grid/index";
 import Button from "react-bootstrap/Button";
 import Navbar from "../components/NavBar";
+import htmlJs from "../htmlJavascript.json";
+import nodeJS from "../nodeJS.json";
+import reactJS from "../reactJS.json";
 import { Link } from "react-router-dom";
+import ProjectCarousel from "../components/carousel/index";
 import Particles from 'react-particles-js';
 import "./LandingPage.css";
 
@@ -14,11 +18,30 @@ export default class LandingPage extends React.Component {
             super(props)
 
             this.state = {
+				htmlVisible: false,
+            javascriptVisible: false,
+            handlebarsVisible: false,
+            reactVisible : false,
+            nodeVisible: false
 
             }
         }
         
-        
+		handleHtml = (e) => {
+			this.setState({ htmlVisible: true,
+			 reactVisible : false,
+			 nodeVisible: false})
+		}
+		handleNode = (e) => {
+		  this.setState({ htmlVisible: false,
+		   reactVisible : false,
+		   nodeVisible: true})
+		}
+		handleReact = (e) => {
+		 this.setState({ htmlVisible: false,
+		   reactVisible : true,
+		   nodeVisible: false,})
+		}
        
         render() {
             return (
@@ -110,8 +133,26 @@ export default class LandingPage extends React.Component {
 
 				<div className="projectsWrapper">
 						<span className = "projectHeading">
-							<h1>Projects</h1>
+						<h1>Projects</h1>
 						</span>
+						<center style={{ color:"white", fontFamily: "'VT323', monospace"}}> {this.state.htmlVisible ? <h2>Html and javascript Projects</h2> : null}
+						<Button onClick={this.handleHtml}variant="outline-warning">HTML/Javascript</Button>     <Button onClick={this.handleNode} variant="outline-dark">Node</Button>   <Button onClick={this.handleReact} variant="outline-danger">React</Button> 
+                        
+						{this.state.handlebarsVisible ? <h2>Handlebars projects</h2> : null}
+						{this.state.reactVisible ? <h2>React Projects</h2> : null}
+						{this.state.nodeVisible ? <h2>Node Projects</h2> : null}</center>
+							
+							<div className="projectDisplay">
+                  <Row>
+                      <Col size="md-12">
+                         {this.state.htmlVisible ?   <ProjectCarousel projects={htmlJs} />: null} 
+                        {this.state.nodeVisible ? <ProjectCarousel projects={nodeJS} /> : null}
+                        {this.state.reactVisible ? <ProjectCarousel projects={reactJS} /> : null}
+                          
+                      </Col>
+                  </Row>
+              </div>
+						
 				</div>
 
 				<div className="myOfferWrapper">
