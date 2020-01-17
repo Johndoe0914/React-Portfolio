@@ -117,39 +117,61 @@ export default class LandingPage extends React.Component {
 					<span className="aboutHeading">
 					<h1>About</h1>
 					</span>
-					<Row>
+					
                     <div className="aboutMe">
-						<Col size="6">
+					<Row>
+					<Col size="sm-2 md-4 lg-6">
 						<div className="aboutPic">
-					<img style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"300px", boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="Jonathans image" src="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-male-avatar-maker.jpg" />
+					<img  className="img-fluid"style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"300px", boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="Jonathans image" src="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-male-avatar-maker.jpg" />
 					</div></Col>
 					
 					<Col size="6">
-                    <div className="aboutDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <div className="aboutDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
                     </Col>
+					</Row>
+					<Row>
+						<Col size="12">
+						<span className="langHeading">
+						<h4>Familiar with</h4>
+					</span>
+					<div className="Badges">
+					<img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" />
+					<img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://fuzati.com/wp-content/uploads/2016/12/CSS-Logo.png" />
+					<img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://api.badgr.io/public/badges/kQBWBLydRGOq1148Kng3sw/image" />
+					<img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" />
+					<img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" />
+					<img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="http://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/e5eee315a17de0d7f56117077eb71fa9/mongo.png" />
+					<img style={{display:"inline-block", height:"65px", margin:"30px"}}alt="htmlbadge" src="https://buttercms.com/static/images/tech_banners/ExpressJS.png" />
 					</div>
-                    </Row>
+						
+						</Col>
+					</Row>
+					</div>
+                   
 				</div>
 
 				<div className="projectsWrapper">
 						<span className = "projectHeading">
 						<h1>Projects</h1>
 						</span>
-						<center style={{ color:"white", fontFamily: "'VT323', monospace"}}> {this.state.htmlVisible ? <h2>Html and javascript Projects</h2> : null}
-						<Button onClick={this.handleHtml}variant="outline-warning">HTML/Javascript</Button>     <Button onClick={this.handleNode} variant="outline-dark">Node</Button>   <Button onClick={this.handleReact} variant="outline-danger">React</Button> 
-                        
-						{this.state.handlebarsVisible ? <h2>Handlebars projects</h2> : null}
-						{this.state.reactVisible ? <h2>React Projects</h2> : null}
-						{this.state.nodeVisible ? <h2>Node Projects</h2> : null}</center>
+					
 							
 							<div className="projectDisplay">
                   <Row>
-                      <Col size="md-12">
-                         {this.state.htmlVisible ?   <ProjectCarousel projects={htmlJs} />: null} 
-                        {this.state.nodeVisible ? <ProjectCarousel projects={nodeJS} /> : null}
-                        {this.state.reactVisible ? <ProjectCarousel projects={reactJS} /> : null}
-                          
-                      </Col>
+			<div className="navTabs">
+				<ul className="nav nav-tabs">
+				<li className="nav-item">
+					<a href="#home" className="nav-link active" data-toggle="tab">Home</a>
+				</li>
+				<li className="nav-item">
+					<a href="#profile" className="nav-link" data-toggle="tab">Profile</a>
+				</li>
+				<li className="nav-item">
+					<a href="#messages" className="nav-link" data-toggle="tab">Messages</a>
+				</li>
+			</ul>
+			</div>
                   </Row>
               </div>
 						
