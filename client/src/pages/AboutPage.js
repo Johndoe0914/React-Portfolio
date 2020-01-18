@@ -49,6 +49,7 @@ export default class AboutPage extends React.Component {
             subject,
             message
         })
+        console.log(form)
 
         this.setState({ firstname:"", lastname:"",subject:"",message:""})
     }

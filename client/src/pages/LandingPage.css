@@ -64,9 +64,7 @@
 
  
 }
-.aboutPic {
 
-}
 .aboutPic {
   display:inline-block ;
   margin: 45px;
@@ -98,19 +96,30 @@
 
 .projectHeading {
   text-align: center;
+  margin-top: 100px;
   
   
   
 
 }
 
-.navTabs {
+/* .navTabs {
   position: relative;
   text-align: center;
+ margin: auto;
+  
  
 
+} */
+
+.tab-content {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background-color: green;
+  margin: auto;
 }
-/* .projectDisplay {
+.projectDisplay {
   position:relative;
    margin:auto ;
    text-align: center;
@@ -119,8 +128,8 @@
   width: 900px ;
   height:600px;
   box-Shadow: 0 3px 6px black, 0 3px 6px black; 
-  background-Color: transparent;
-} */
+  background-Color: white;
+}
 
 .myOfferWrapper {
   position: relative;
@@ -136,11 +145,25 @@
 
 .contactWrapper {
   position: relative;
-  width: 100%;
+  width: auto;
   height: 600px;
-  background-color: yellow;
+  background-color: darkgray;
+ margin: auto;
+
 }
 
 .contactHeading {
   text-align: center;
+  padding-top: 60px;
+}
+
+.formWrapper {
+  position: relative;
+  width: 700px;
+  height: auto;
+  margin: 50px auto;
+  background-color: darkgreen;
+  padding: 20px;
+  box-Shadow: 0 3px 6px grey, 0 3px 6px grey; 
+  color: white;
 }

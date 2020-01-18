@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Col , Row } from "../components/Grid/index";
-import Button from "react-bootstrap/Button";
 import Navbar from "../components/NavBar";
 import htmlJs from "../htmlJavascript.json";
 import nodeJS from "../nodeJS.json";
@@ -8,6 +7,8 @@ import reactJS from "../reactJS.json";
 import { Link } from "react-router-dom";
 import ProjectCarousel from "../components/carousel/index";
 import Particles from 'react-particles-js';
+import { Form, Button} from "react-bootstrap";
+import axios from "axios"
 import "./LandingPage.css";
 
 
@@ -22,7 +23,11 @@ export default class LandingPage extends React.Component {
             javascriptVisible: false,
             handlebarsVisible: false,
             reactVisible : false,
-            nodeVisible: false
+			nodeVisible: false,
+			firstname: "",
+			lastname: "",
+			subject: "",
+			message: ""
 
             }
         }
@@ -42,6 +47,26 @@ export default class LandingPage extends React.Component {
 		   reactVisible : true,
 		   nodeVisible: false,})
 		}
+		handleChange = (e) => {
+			this.setState({[e.target.name]: e.target.value })
+		}
+
+		handleSubmit = (e) => {
+			e.preventDefault();
+	
+			const { firstname, lastname, subject, message} = this.state;
+	
+			const form = axios.post("/api/form", {
+				firstname,
+				lastname,
+				subject,
+				message
+			})
+	
+			console.log(form)
+			this.setState({ firstname:"", lastname:"",subject:"",message:""})
+		}
+	
        
         render() {
             return (
@@ -159,20 +184,47 @@ export default class LandingPage extends React.Component {
 							
 							<div className="projectDisplay">
                   <Row>
-			<div className="navTabs">
-				<ul className="nav nav-tabs">
-				<li className="nav-item">
-					<a href="#home" className="nav-link active" data-toggle="tab">Home</a>
-				</li>
-				<li className="nav-item">
-					<a href="#profile" className="nav-link" data-toggle="tab">Profile</a>
-				</li>
-				<li className="nav-item">
-					<a href="#messages" className="nav-link" data-toggle="tab">Messages</a>
-				</li>
+			<Col size="12">
+			{/* <ul className="nav nav-tabs">
+			<li className="active"><a data-toggle="tab" href="#home">Home</a></li>
+			<li><a data-toggle="tab" href="#home">Menu 1</a></li>
+			<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+			</ul> */}
+
+	
+			<ul className="nav nav-pills">
+				<li className="nav-item active"><a data-toggle="tab" href="#home">Home</a></li>
+				<li className="nav-item active"><a data-toggle="pill" href="#node">Node</a></li>
+				<li className="nav-item active"><a data-toggle="tab" href="#home">Home</a></li>
 			</ul>
-			</div>
+			
+
+
+			</Col>
                   </Row>
+				  <Row>
+					  <Col size="12">
+			
+					  <div className="tab-content">
+					<div id="node" className="tab-pane fade in active">
+					<h3>HOME</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div id="menu1" className="tab-pane fade">
+					<h3>Menu 1</h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div id="menu2" className="tab-pane fade">
+					<h3>Menu 2</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					</div>
+					<div id="menu3" className="tab-pane fade">
+					<h3>Menu 3</h3>
+					<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					</div>
+				</div>
+					  </Col>
+				  </Row>
               </div>
 						
 				</div>
@@ -187,6 +239,38 @@ export default class LandingPage extends React.Component {
 				<span className = "contactHeading">
 							<h1>Contact</h1>
 						</span>
+
+						<div className="formWrapper">
+						<Form onSubmit={this.handleSubmit}>
+					<Form.Row>
+						<Form.Group  controlId="formGridFirstName">
+						<Form.Label>First Name</Form.Label>
+						<Form.Control type="text"  onChange={this.handleChange} name="firstname"  placeholder="Enter First Name" />
+						</Form.Group>
+
+						<Form.Group  controlId="formGridLastName">
+						<Form.Label>Last Name</Form.Label>
+						<Form.Control type="text"  onChange={this.handleChange} name="lastname" value={this.state.lastname} placeholder="Enter Last Name" />
+						</Form.Group>
+					</Form.Row>
+
+					<Form.Group controlId="formGridSubject">
+						<Form.Label>Subject</Form.Label>
+						<Form.Control style={{width:"400px"}}  onChange={this.handleChange}value={this.state.subject} name="subject" placeholder="Enter subject" />
+					</Form.Group>
+
+					<Form.Group controlId="formGridSubjectDetails">
+						<Form.Label>Subject Details</Form.Label>
+						<br />
+						<textarea name="message" onChange={this.handleChange} value={this.state.message} rows="5" cols="70"></textarea> 
+					</Form.Group>
+
+
+					<Button variant="danger" type="submit">
+						Send
+					</Button>
+					</Form>
+						</div>
 				</div>
                     
              
