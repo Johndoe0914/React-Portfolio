@@ -1,39 +1,39 @@
-.card {
+.card1 {
     background: #fff;
     border-radius: 2px;
-    height: auto;
+    height: 700px; 
     margin: 10px;
     position: relative;
     width: 175px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     text-align: left;
-    display: inline-flex;
+ 
     margin-bottom: 50px;
     
   
   }
   
-  .card > .img-container {
+  .card1 > .img-container {
     height: 60%;
     
     text-align: center;
     background: black;
   }
-  .card > .img-container > img {
+  .card1 > .img-container > img {
     width: 60%
   }
   
-  .card > .content {
+  .card1 > .content {
     padding-left: 0%;
     padding-right: 1rem;
     font-size: 15px;
   }
   
-  .card > .content > ul {
+  .card1 > .content > ul {
     list-style-type: none;
   }
   
-  .card > .content > ul > li {
+  .card1> .content > ul > li {
     margin-top: 18px;
   }
   .profileImageShowCase {

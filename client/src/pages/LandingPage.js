@@ -7,9 +7,11 @@ import reactJS from "../reactJS.json";
 import { Link } from "react-router-dom";
 import ProjectCarousel from "../components/carousel/index";
 import Particles from 'react-particles-js';
-import { Form, Button} from "react-bootstrap";
+import { Form, Button, Carousel, Fade} from "react-bootstrap";
 import axios from "axios"
 import "./LandingPage.css";
+import ScrollAnimation from "react-animate-on-scroll"
+import "animate.css/animate.min.css"
 
 
 
@@ -22,7 +24,7 @@ export default class LandingPage extends React.Component {
 				htmlVisible: false,
             javascriptVisible: false,
             handlebarsVisible: false,
-            reactVisible : false,
+            reactVisible : true,
 			nodeVisible: false,
 			firstname: "",
 			lastname: "",
@@ -70,7 +72,8 @@ export default class LandingPage extends React.Component {
        
         render() {
             return (
-               <Container fluid>
+              
+				   <Container fluid>
                    <div className="overlay"><Particles  params={{
 	    "particles": {
 	        "number": {
@@ -123,18 +126,20 @@ export default class LandingPage extends React.Component {
 	    }
 	}} /></div>
                 
-                <div className="Text" style={{ fontFamily: "'VT323', monospace"}}>
+				<ScrollAnimation delay={500} animateIn="fadeIn" >
+				<div className="Text" style={{ fontFamily: "'VT323', monospace"}}>
                 
-                    <strong><h1>Welcome Stranger,</h1></strong>
-                    <br />
-                    <strong><h1>My name is </h1>
-                    <h1 style={{color: "red"}}>Jonathan Diaz</h1></strong>
-                        
-                    <br />
-                    <strong><h1>Full Stack Web Developer</h1></strong> 
-                    <br />
-                    <Link to="/about"><Button variant="primary">View More -></Button></Link>
-                </div>
+				<strong><h1>Welcome Stranger,</h1></strong>
+				<br />
+				<strong><h1>My name is </h1>
+				<h1 style={{color: "red"}}>Jonathan Diaz</h1></strong>
+					
+				<br />
+				<strong><h1>Full Stack Web Developer</h1></strong> 
+				<br />
+				<Link to="/about"><Button variant="primary">View More -></Button></Link>
+			</div>
+				</ScrollAnimation>
                 <div className="NavWrapper">
                 <Navbar/>
                 </div>
@@ -143,7 +148,10 @@ export default class LandingPage extends React.Component {
 					<h1>About</h1>
 					</span>
 					
-                    <div className="aboutMe">
+                <ScrollAnimation 
+					animateIn='bounceInRight'
+					animateOut='bounceOutLeft'>
+				   <div className="aboutMe">
 					<Row>
 					<Col size="sm-2 md-4 lg-6">
 						<div className="aboutPic">
@@ -173,6 +181,8 @@ export default class LandingPage extends React.Component {
 						</Col>
 					</Row>
 					</div>
+					</ScrollAnimation>
+				   
                    
 				</div>
 
@@ -181,51 +191,33 @@ export default class LandingPage extends React.Component {
 						<h1>Projects</h1>
 						</span>
 					
-							
-							<div className="projectDisplay">
-                  <Row>
-			<Col size="12">
-			{/* <ul className="nav nav-tabs">
-			<li className="active"><a data-toggle="tab" href="#home">Home</a></li>
-			<li><a data-toggle="tab" href="#home">Menu 1</a></li>
-			<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-			</ul> */}
-
-	
-			<ul className="nav nav-pills">
-				<li className="nav-item active"><a data-toggle="tab" href="#home">Home</a></li>
-				<li className="nav-item active"><a data-toggle="pill" href="#node">Node</a></li>
-				<li className="nav-item active"><a data-toggle="tab" href="#home">Home</a></li>
-			</ul>
-			
-
-
-			</Col>
-                  </Row>
+			<ScrollAnimation animateIn='fadeIn' animateOut="fadeOut">
+								
+			<div className="projectDisplay">
+								<Row>
+									<Col size="12">
+									<div className="buttons">
+									<Button onClick={this.handleHtml}variant="outline-warning">HTML/Javascript</Button>     
+									<Button onClick={this.handleNode} variant="outline-dark">Node</Button>  
+									 <Button onClick={this.handleReact} variant="outline-danger">React</Button>
+									</div>
+									</Col>
+								</Row>
+                 
 				  <Row>
 					  <Col size="12">
-			
-					  <div className="tab-content">
-					<div id="node" className="tab-pane fade in active">
-					<h3>HOME</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div id="menu1" className="tab-pane fade">
-					<h3>Menu 1</h3>
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<div id="menu2" className="tab-pane fade">
-					<h3>Menu 2</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-					</div>
-					<div id="menu3" className="tab-pane fade">
-					<h3>Menu 3</h3>
-					<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-					</div>
-				</div>
+						{this.state.reactVisible ? <ProjectCarousel projects={reactJS}/> : null}
+						{this.state.nodeVisible ? <ProjectCarousel projects={nodeJS}/> : null}
+						{this.state.htmlVisible ? <ProjectCarousel projects={htmlJs}/> : null}
+						
+						
+						  
+
+
 					  </Col>
 				  </Row>
               </div>
+			</ScrollAnimation>
 						
 				</div>
 
@@ -238,6 +230,7 @@ export default class LandingPage extends React.Component {
 				<div className="contactWrapper">
 				<span className = "contactHeading">
 							<h1>Contact</h1>
+							<p style={{ color:"cyan"}}>Have a question or want to work together?</p>
 						</span>
 
 						<div className="formWrapper">
@@ -275,7 +268,7 @@ export default class LandingPage extends React.Component {
                     
              
 				</Container>
-               
+			
             )
         }
 }

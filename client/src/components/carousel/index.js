@@ -41,7 +41,7 @@ export default class ProfileCarousel extends React.Component {
             <div className="profileImageShowCase">
               <Swiper {...params}>
                  {this.props.projects.map(project => (
-                    <div className="card">
+                    <div className="card1">
                     <div className="img-container">
                         <div className="img-div">
                             <img src={project.projectImage} />

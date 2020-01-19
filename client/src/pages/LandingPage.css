@@ -97,20 +97,19 @@
 .projectHeading {
   text-align: center;
   margin-top: 100px;
+ 
   
   
   
 
 }
 
-/* .navTabs {
-  position: relative;
-  text-align: center;
- margin: auto;
+.navTabs {
+ 
   
  
 
-} */
+}
 
 .tab-content {
   position: relative;
@@ -128,9 +127,12 @@
   width: 900px ;
   height:600px;
   box-Shadow: 0 3px 6px black, 0 3px 6px black; 
-  background-Color: white;
+  background-Color: black;
 }
-
+.buttons {
+  position: relative;
+  padding-top: 20px;
+}
 .myOfferWrapper {
   position: relative;
   width: 100%;
@@ -147,14 +149,15 @@
   position: relative;
   width: auto;
   height: 600px;
-  background-color: darkgray;
+  background-color: black;
  margin: auto;
 
 }
 
 .contactHeading {
   text-align: center;
-  padding-top: 60px;
+  margin-top: 50px;
+  color: white;
 }
 
 .formWrapper {
@@ -162,7 +165,7 @@
   width: 700px;
   height: auto;
   margin: 50px auto;
-  background-color: darkgreen;
+  background-color: darkslategrey;
   padding: 20px;
   box-Shadow: 0 3px 6px grey, 0 3px 6px grey; 
   color: white;
