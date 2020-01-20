@@ -137,13 +137,27 @@ export default class LandingPage extends React.Component {
 				<br />
 				<strong><h1>Full Stack Web Developer</h1></strong> 
 				<br />
-				<Link to="/about"><Button variant="primary">View More -></Button></Link>
+				<Link to="/about"><button className="animated-button1">View More -></button></Link>
 			</div>
 				</ScrollAnimation>
+
+
                 <div className="NavWrapper">
-                <Navbar/>
+							<div className="">
+				<nav className="navbar sticky-top navbar-black bg-black  navbar-expand-lg">
+			
+			<div className="scrollspy">
+			<a className="navbar-brand" href="#about">About</a>
+			<a className="navbar-brand" href="#portfolio">Portfolio</a>
+			<a className="navbar-brand" href="#resume">Resume</a>
+			</div>
+			
+			</nav>
+  			 </div>
                 </div>
-				<div className="AboutWrapper">
+
+
+				<div id="about"className="AboutWrapper">
 					<span className="aboutHeading">
 					<h1>About</h1>
 					</span>
@@ -155,7 +169,7 @@ export default class LandingPage extends React.Component {
 					<Row>
 					<Col size="sm-2 md-4 lg-6">
 						<div className="aboutPic">
-					<img  className="img-fluid"style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"300px", boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="Jonathans image" src="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-male-avatar-maker.jpg" />
+					<img  className="img-fluid"style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"300px", width:"300px" ,boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="Jonathans image" src="https://i.imgur.com/7TgLRdo.jpg?1" />
 					</div></Col>
 					
 					<Col size="6">
@@ -186,7 +200,7 @@ export default class LandingPage extends React.Component {
                    
 				</div>
 
-				<div className="projectsWrapper">
+				<div id="portfolio" className="projectsWrapper">
 						<span className = "projectHeading">
 						<h1>Projects</h1>
 						</span>
@@ -221,7 +235,7 @@ export default class LandingPage extends React.Component {
 						
 				</div>
 
-				<div className="myOfferWrapper">
+				<div id="resume"className="myOfferWrapper">
 				<span className = "offerHeading">
 							<h1>What can i offer?</h1>
 						</span>

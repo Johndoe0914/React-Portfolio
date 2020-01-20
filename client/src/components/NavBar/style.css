@@ -17,3 +17,13 @@ nav.navbar.navbar-default {
      padding: 10px;
      font-size: 20px;
   }
+
+  .scrollspy {
+     position: relative;
+     margin: auto;
+     
+  }
+
+  .scrollspy :hover {
+     color: red;
+  }
