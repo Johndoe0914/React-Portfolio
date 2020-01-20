@@ -137,7 +137,7 @@ export default class LandingPage extends React.Component {
 				<br />
 				<strong><h1>Full Stack Web Developer</h1></strong> 
 				<br />
-				<Link to="/about"><button className="animated-button1">View More -></button></Link>
+				<Link to="#about"><button className="animated-button1">View More -></button></Link>
 			</div>
 				</ScrollAnimation>
 
@@ -163,7 +163,7 @@ export default class LandingPage extends React.Component {
 					</span>
 					
                 <ScrollAnimation 
-					animateIn='bounceInRight'
+					delay={100} animateIn="fadeIn"
 					animateOut='bounceOutLeft'>
 				   <div className="aboutMe">
 					<Row>
@@ -173,7 +173,7 @@ export default class LandingPage extends React.Component {
 					</div></Col>
 					
 					<Col size="6">
-                    <div className="aboutDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <div className="aboutDesc"> Welcome to portfolio, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
                     </Col>
 					</Row>
@@ -239,6 +239,10 @@ export default class LandingPage extends React.Component {
 				<span className = "offerHeading">
 							<h1>What can i offer?</h1>
 						</span>
+
+						<div className="myOffer">
+							
+						</div>
 				</div>
 
 				<div className="contactWrapper">
@@ -250,9 +254,9 @@ export default class LandingPage extends React.Component {
 						<div className="formWrapper">
 						<Form onSubmit={this.handleSubmit}>
 					<Form.Row>
-						<Form.Group  controlId="formGridFirstName">
+						<Form.Group style={{ marginRight:"20px"}} controlId="formGridFirstName">
 						<Form.Label>First Name</Form.Label>
-						<Form.Control type="text"  onChange={this.handleChange} name="firstname"  placeholder="Enter First Name" />
+						<Form.Control  type="text"  onChange={this.handleChange} name="firstname"  placeholder="Enter First Name" />
 						</Form.Group>
 
 						<Form.Group  controlId="formGridLastName">
