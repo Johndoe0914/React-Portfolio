@@ -20,7 +20,9 @@
 
 } */
 
-
+body {
+  font-family: 'Averia Serif Libre', cursive;
+}
 
 .overlay{
     position:  absolute;
@@ -35,6 +37,7 @@
     text-align: center;
     color: white;
     z-index: 11;
+    font-family: 'Averia Serif Libre', cursive;
   
 }
 .NavWrapper {
@@ -91,6 +94,9 @@
 .aboutDesc {
   padding-top: 50px;
   padding-right: 30px;
+  line-height: 30px;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
 
   
 }
@@ -156,8 +162,13 @@
   position: relative;
   width: 850px;
   height: 600px;
-  background-color: grey;
+  background-color: white;
   margin: auto;
+  
+  box-Shadow: 0 3px 6px grey, 0 3px 6px grey; 
+  padding: 60px;
+
+
 }
 
 
