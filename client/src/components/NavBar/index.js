@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./style.css";
 
 
@@ -9,11 +9,11 @@ function Navbar() {
    <div className="">
       <nav className="navbar sticky-top navbar-black bg-black  navbar-expand-lg">
  
- <div className="scrollspy">
+ {/* <div className="scrollspy">
  <a className="navbar-brand" href="#">About</a>
   <a className="navbar-brand" href="#">Portfolio</a>
   <a className="navbar-brand" href="#">Resume</a>
- </div>
+ </div> */}
  
 </nav>
    </div>

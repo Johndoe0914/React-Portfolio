@@ -5,7 +5,7 @@ import nodeJS from "../nodeJS.json";
 import reactJS from "../reactJS.json";
 import ProjectCarousel from "../components/carousel/index";
 import "./PortfolioPage.css";
-import { Link } from "react-router-dom";
+
 import { Button } from "react-bootstrap"
 
 
@@ -81,8 +81,8 @@ export default class Portfolio extends React.Component {
                   </Col>
                   <Col size="md-4">
                   <ul style={{ listStyle:"none",}}>
-                      <li><a href="https://github.com/Johndoe0914"><img style={{ display:"inline-block", height:"40px", color:"white", marginTop:"30px"}} src="https://upload.wikimedia.org/wikipedia/commons/5/54/GitHub_Logo.png" /></a></li>
-                      <li><a href="https://www.linkedin.com/in/jonathan-diaz-46a7ba15b/"><img style={{ display:"inline-block", height:"40px", color:"white", marginBottom:"20px"}} src="http://chittagongit.com/download/88343" /></a></li>
+                      <li><a href="https://github.com/Johndoe0914"><img alt="poison ivy"style={{ display:"inline-block", height:"40px", color:"white", marginTop:"30px"}} src="https://upload.wikimedia.org/wikipedia/commons/5/54/GitHub_Logo.png" /></a></li>
+                      <li><a href="https://www.linkedin.com/in/jonathan-diaz-46a7ba15b/"><img alt="poison ivy"style={{ display:"inline-block", height:"40px", color:"white", marginBottom:"20px"}} src="http://chittagongit.com/download/88343" /></a></li>
                     </ul>
                   </Col>
                 </Row>

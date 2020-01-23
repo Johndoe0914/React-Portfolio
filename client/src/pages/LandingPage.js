@@ -1,13 +1,13 @@
 import React from "react";
 import { Container, Col , Row } from "../components/Grid/index";
-import Navbar from "../components/NavBar";
+// import Navbar from "../components/NavBar";
 import htmlJs from "../htmlJavascript.json";
 import nodeJS from "../nodeJS.json";
 import reactJS from "../reactJS.json";
 import { Link } from "react-router-dom";
 import ProjectCarousel from "../components/carousel/index";
 import Particles from 'react-particles-js';
-import { Form, Button, Carousel, Fade} from "react-bootstrap";
+import { Form, Button} from "react-bootstrap";
 import axios from "axios"
 import "./LandingPage.css";
 import ScrollAnimation from "react-animate-on-scroll"
@@ -53,19 +53,22 @@ export default class LandingPage extends React.Component {
 			this.setState({[e.target.name]: e.target.value })
 		}
 
-		handleSubmit = (e) => {
+		handleSubmit = async (e)  => {
 			e.preventDefault();
+			console.log(this.state)
 	
 			const { firstname, lastname, subject, message} = this.state;
 	
-			const form = axios.post("/api/form", {
+			const form = await axios.post("/api/form1", {
 				firstname,
 				lastname,
 				subject,
 				message
+			}).catch((err) => {
+				console.log(err)
 			})
-	
-			console.log(form)
+					
+			console.log("Form",form)
 			this.setState({ firstname:"", lastname:"",subject:"",message:""})
 		}
 	
@@ -127,7 +130,7 @@ export default class LandingPage extends React.Component {
 	}} /></div>
                 
 				<ScrollAnimation delay={500} animateIn="fadeIn" >
-				<div className="Text" style={{ fontFamily: "'VT323', monospace"}}>
+				<div className="Text" style={{}}>
                 
 				<strong><h1>Welcome Stranger,</h1></strong>
 				<br />
@@ -169,11 +172,11 @@ export default class LandingPage extends React.Component {
 					<Row>
 					<Col size="sm-2 md-4 lg-6">
 						<div className="aboutPic">
-					<img  className="img-fluid"style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"300px", width:"300px" ,boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="Jonathans image" src="https://i.imgur.com/7TgLRdo.jpg?1" />
+					<img  className="img-fluid"style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"300px", width:"300px" ,boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="baby giraffe" src="https://i.imgur.com/7TgLRdo.jpg?1" />
 					</div></Col>
 					
 					<Col size="6">
-                    <div className="aboutDesc"> Welcome to my portfolio, My name is Jonathan Diaz i am 20 years old,i am a UCF Coding bootcamp graduate .I currently reside in Kissimmee, Florida. I am a young motivated individual who wants to strive and do his best in everything he does. I would describe myself as being a proactive ,dynamic and a team player. My goal is to find a great company i can work for to further develop my skills as a developer and gain experience as i work. I am also always seeking to expand on my current knowledge base. Feel free to email me down below !  </div>
+                    <div className="aboutDesc"> Welcome to my portfolio, My name is Jonathan Diaz i am 20 years old and also a UCF Coding bootcamp graduate .I currently reside in Kissimmee, Florida. I am a young motivated individual who wants to strive and do his best in everything he does. I would describe myself as being a proactive ,dynamic and a team player. My goal is to find a great company i can work for to further develop my skills as a developer and gain experience as i work. I am also always seeking to expand on my current knowledge base. Feel free to email me down below !  </div>
                     </Col>
 					</Row>
 					<Row>

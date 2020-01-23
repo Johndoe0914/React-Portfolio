@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser');
-const nodeMailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 require('dotenv').config()
 const path = require('path');
 const app = express();
@@ -9,32 +9,39 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 
-app.post("/api/form", (req,res) => {
-    console.log(req)
+app.post("/api/form1", (req,res) => {
+
+    const {firstname, lastname, subject, message} = req.body
     
-    nodeMailer.createTestAccount((err, account) => {
+   var headers = req.headers
+
+    console.log(headers)
+  
+   
+    
+    nodemailer.createTestAccount((err, account) => {
         const htmlEmail = `
         <h3>Contact Details</h3>
         <ul>
-            <li> Name: ${req.body.firstname} ${req.body.lastname}</li>
+            <li> Name: ${firstname} ${lastname}</li>
 
          </ul>
          <h3>Message</h3>
-         <h4>Subject: ${req.body.subject}</h4>
-         <p style={{{ color:"red"}}}>Message: ${req.body.message}</p>
+         <h4>Subject: ${subject}</h4>
+         <p style={{{ color:"red"}}}>Message: ${message}</p>
         `
 
         let transporter = nodeMailer.createTransport({
-            service: "gmail",
+            service: "outlook",
             auth: {
-                user: "jonathanheroku0914@gmail.com",
+                user: "jonathanheroku0914@hotmail.com",
                 pass: "091499.j"
             }
         });
 
         let mailOptions = {
             from: "test@testaccount.com",
-            to: "jonathanheroku0914@gmail.com",
+            to: "jonathanheroku0914@hotmail.com",
             replyTo: "test@testaccount.com",
             subject: "New message",
             test: "req.body.message",
@@ -43,12 +50,13 @@ app.post("/api/form", (req,res) => {
 
         transporter.sendMail(mailOptions, (err, info) => {
             if(err){
-                return console.log(err)
+                return console.log('ERROR',err)
 
             }
+    
             console.log("message sent: %s", info.message)
             console.log("message URL: %s", nodeMailer.getTestMessageUrl(info))
-        })
+        }) 
     })
 })
 

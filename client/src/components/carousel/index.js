@@ -1,9 +1,9 @@
 import React from 'react';
-import Carousel from "react-bootstrap/Carousel";
-import { Row, Container} from "../Grid/index";
+
+import { Row} from "../Grid/index";
 import Swiper from 'react-id-swiper';
 // Need to add Pagination, Navigation modules
-import { Pagination, Navigation } from 'swiper/dist/js/swiper.esm';
+// import { Pagination, Navigation } from 'swiper/dist/js/swiper.esm';
 import "./style.css";
 
 
@@ -34,17 +34,17 @@ export default class ProfileCarousel extends React.Component {
     }
 
     render() {
-      let id = 0;
+      // let id = 0;
       return (
           <Row>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.css"></link>
             <div className="profileImageShowCase">
               <Swiper {...params}>
-                 {this.props.projects.map(project => (
-                    <div className="card1">
+                 {this.props.projects.map((project , index) => (
+                    <div key={index} className="card1">
                     <div className="img-container">
                         <div className="img-div">
-                            <img src={project.projectImage} />
+                            <img  alt={project.projectDescription}src={project.projectImage} />
                         </div>
                     </div>
                     <div className="content">

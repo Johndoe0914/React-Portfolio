@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router , Route, Switch } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import Navbar from "./components/NavBar";
+
 import About from "./pages/AboutPage";
 import Portfolio from "./pages/PortfolioPage";
 //import NoMatch from "./pages/NoMatch";

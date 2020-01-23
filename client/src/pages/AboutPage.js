@@ -62,7 +62,7 @@ export default class AboutPage extends React.Component {
                 <Col size="md-4">
                 <div className="pictureWrapper">
     
-                    <img style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"325px", boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="Jonathans image" src="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-male-avatar-maker.jpg" />
+                    <img style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"325px", boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="baby koala" src="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-male-avatar-maker.jpg" />
 
                     
                   
@@ -166,8 +166,8 @@ export default class AboutPage extends React.Component {
                   </Col>
                   <Col size="md-4">
                     <ul style={{ listStyle:"none",}}>
-                      <li><a href="https://github.com/Johndoe0914"><img style={{ display:"inline-block", height:"40px", color:"white", marginTop:"30px"}} src="https://upload.wikimedia.org/wikipedia/commons/5/54/GitHub_Logo.png" /></a></li>
-                      <li><a href="https://www.linkedin.com/in/jonathan-diaz-46a7ba15b/"><img style={{ display:"inline-block", height:"40px", color:"white"}} src="http://chittagongit.com/download/88343" /></a></li>
+                      <li><a href="https://github.com/Johndoe0914"><img style={{ display:"inline-block", height:"40px", color:"white", marginTop:"30px"}} src="https://upload.wikimedia.org/wikipedia/commons/5/54/GitHub_Logo.png"  alt="poison ivy"/></a></li>
+                      <li><a href="https://www.linkedin.com/in/jonathan-diaz-46a7ba15b/"><img style={{ display:"inline-block", height:"40px", color:"white"}} src="http://chittagongit.com/download/88343" alt="poison ivy"/></a></li>
                     </ul>
                   </Col>
                 </Row>
