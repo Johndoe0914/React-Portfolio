@@ -16,6 +16,7 @@ import "animate.css/animate.min.css"
 
 
 
+
 export default class LandingPage extends React.Component {
         constructor(props){
             super(props)
@@ -31,7 +32,8 @@ export default class LandingPage extends React.Component {
 			subject: "",
 			message: ""
 
-            }
+			}
+			this.handleSubmit = this.handleSubmit.bind(this);
         }
         
 		handleHtml = (e) => {
@@ -53,13 +55,16 @@ export default class LandingPage extends React.Component {
 			this.setState({[e.target.name]: e.target.value })
 		}
 
-		handleSubmit = async (e)  => {
+		async handleSubmit(e) {
 			e.preventDefault();
-			console.log(this.state)
+			
 	
 			const { firstname, lastname, subject, message} = this.state;
+
+		
+
 	
-			const form = await axios.post("/api/form1", {
+			const form =  await axios.post("/api/form", {
 				firstname,
 				lastname,
 				subject,

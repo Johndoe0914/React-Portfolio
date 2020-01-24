@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser');
+
 const nodemailer = require('nodemailer');
+
 require('dotenv').config()
 const path = require('path');
 const app = express();
@@ -9,13 +11,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 
-app.post("/api/form1", (req,res) => {
+app.post("/api/form",  (req,res) => {
 
-    const {firstname, lastname, subject, message} = req.body
+
+    // const {firstname, lastname, subject, message} = req.body
     
-   var headers = req.headers
-
-    console.log(headers)
   
    
     
@@ -23,25 +23,25 @@ app.post("/api/form1", (req,res) => {
         const htmlEmail = `
         <h3>Contact Details</h3>
         <ul>
-            <li> Name: ${firstname} ${lastname}</li>
+            <li> Name: ${req.body.firstname} ${req.body.lastname}</li>
 
          </ul>
          <h3>Message</h3>
-         <h4>Subject: ${subject}</h4>
-         <p style={{{ color:"red"}}}>Message: ${message}</p>
+         <h4>Subject: ${req.body.subject}</h4>
+         <p style={{{ color:"red"}}}>Message: ${req.body.message}</p>
         `
 
-        let transporter = nodeMailer.createTransport({
-            service: "outlook",
+        let transporter = nodemailer.createTransport({
+            service: "gmail",
             auth: {
-                user: "jonathanheroku0914@hotmail.com",
+                user: "jonathanheroku0914@gmail.com",
                 pass: "091499.j"
             }
         });
 
         let mailOptions = {
-            from: "test@testaccount.com",
-            to: "jonathanheroku0914@hotmail.com",
+            from: "portfolio",
+            to: "jonathanheroku0914@gmail.com",
             replyTo: "test@testaccount.com",
             subject: "New message",
             test: "req.body.message",
@@ -55,17 +55,17 @@ app.post("/api/form1", (req,res) => {
             }
     
             console.log("message sent: %s", info.message)
-            console.log("message URL: %s", nodeMailer.getTestMessageUrl(info))
+            console.log("message URL: %s", nodemailer.getTestMessageUrl(info))
         }) 
     })
 })
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 //Static file declaration
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.listen(PORT, () => {
-    console.log("server listening on http://localhost:5000")
+    console.log("server listening on http://localhost:3001")
 })
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
