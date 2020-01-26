@@ -12,6 +12,9 @@ import axios from "axios"
 import "./LandingPage.css";
 import ScrollAnimation from "react-animate-on-scroll"
 import "animate.css/animate.min.css"
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -27,6 +30,7 @@ export default class LandingPage extends React.Component {
             handlebarsVisible: false,
             reactVisible : true,
 			nodeVisible: false,
+			msgSent: false,
 			firstname: "",
 			lastname: "",
 			subject: "",
@@ -34,8 +38,10 @@ export default class LandingPage extends React.Component {
 
 			}
 			this.handleSubmit = this.handleSubmit.bind(this);
-        }
-        
+		}
+		
+	
+
 		handleHtml = (e) => {
 			this.setState({ htmlVisible: true,
 			 reactVisible : false,
@@ -72,9 +78,16 @@ export default class LandingPage extends React.Component {
 			}).catch((err) => {
 				console.log(err)
 			})
+
+			if(form.status === 200) {
+				toast.success("Message Sent")
+				this.setState({ firstname:"", lastname:"",subject:"",message:""})
+			} else {
+				toast.error("Error Occurred")
+			}
 					
 			console.log("Form",form)
-			this.setState({ firstname:"", lastname:"",subject:"",message:""})
+			
 		}
 	
        
@@ -145,14 +158,14 @@ export default class LandingPage extends React.Component {
 				<br />
 				<strong><h1>Full Stack Web Developer</h1></strong> 
 				<br />
-				<Link to="#about"><button className="animated-button1">View More -></button></Link>
+				<a href="#about"><Button variant="outline-danger">View More -></Button></a>
 			</div>
 				</ScrollAnimation>
 
 
                 <div className="NavWrapper">
 							<div className="">
-				<nav className="navbar sticky-top navbar-black bg-black  navbar-expand-lg">
+				<nav  className="navbar  navbar-black bg-black  navbar-expand-lg">
 			
 			<div className="scrollspy">
 			<a className="navbar-brand" href="#about">About</a>
@@ -294,6 +307,31 @@ export default class LandingPage extends React.Component {
 					</Form>
 						</div>
 				</div>
+
+				<footer className="footer">
+					<div className="importantLinks">
+						
+						<ul style={{ listStyle:"none", color:"white", display:"inline-flex",}}>
+							<li>
+								
+								<a  href="http://github.com/johndoe0914"><img style={{display:"inline-block", width:"55px", height:"55px", margin:"30px"}}alt="htmlbadge" src="http://pngimg.com/uploads/github/github_PNG40.png" /></a>
+								
+							</li>
+							<li>
+							<a href="https://www.linkedin.com/in/jonathan-diaz-46a7ba15b/"><img style={{display:"inline-block", width:"55px", height:"55px", margin:"30px"}}alt="htmlbadge" src="https://www.freepnglogos.com/uploads/linkedin-blue-style-logo-png-0.png" /></a>
+								
+							</li>
+							<li>
+							<a href="https://www.linkedin.com/in/jonathan-diaz-46a7ba15b/"><img style={{display:"inline-block", width:"55px", height:"55px", margin:"30px"}}alt="htmlbadge" src="http://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19753.png" /></a>
+							
+							</li>
+						</ul>
+					</div>
+
+					<p style={{ position: "relative", textAlign:"center", marginTop:"60px"}}>Jonathan Diaz © 2020 </p>
+				</footer>
+				
+          <ToastContainer />
                     
              
 				</Container>
