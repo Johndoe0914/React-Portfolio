@@ -23,7 +23,7 @@ app.post("/api/form",  (req,res) => {
         const htmlEmail = `
         <h3>Contact Details</h3>
         <ul>
-            <li> Name: ${req.body.firstname} ${req.body.lastname}</li>
+            <li> Name: ${req.body.name}</li>
 
          </ul>
          <h3>Message</h3>

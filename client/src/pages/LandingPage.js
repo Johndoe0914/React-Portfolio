@@ -31,8 +31,7 @@ export default class LandingPage extends React.Component {
             reactVisible : true,
 			nodeVisible: false,
 			msgSent: false,
-			firstname: "",
-			lastname: "",
+			name:"",
 			subject: "",
 			message: ""
 
@@ -65,14 +64,13 @@ export default class LandingPage extends React.Component {
 			e.preventDefault();
 			
 	
-			const { firstname, lastname, subject, message} = this.state;
+			const { name, subject, message} = this.state;
 
 		
 
 	
 			const form =  await axios.post("/api/form", {
-				firstname,
-				lastname,
+				name,
 				subject,
 				message
 			}).catch((err) => {
@@ -81,7 +79,7 @@ export default class LandingPage extends React.Component {
 
 			if(form.status === 200) {
 				toast.success("Message Sent")
-				this.setState({ firstname:"", lastname:"",subject:"",message:""})
+				this.setState({ name:"",subject:"",message:""})
 			} else {
 				toast.error("Error Occurred")
 			}
@@ -261,9 +259,7 @@ export default class LandingPage extends React.Component {
 						</span>
 
 						<div className="myOffer">
-							<p>Full Stack Web Developer with MongoDB, Express, React, Node.js (MERN). Experienced in building CRUD applications and using RESTful API's with Node and Express. Also have experience using MySql and MongoDB databases.Some experience with Passport JS and JWT. Common libraries of use: Axios, Mongoose, Express, react-router. Common use of UI Libraries: Bootstrap 4, React-Bootstrap. There is still more to come in the future so watch out for that.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							<p>Full Stack Web Developer with MongoDB, Express, React, Node.js (MERN). Experienced in building CRUD applications and using RESTful API's with Node and Express. Also have experience using MySql and MongoDB databases.Some experience with Passport JS and JWT. Common libraries of use: Axios, Mongoose, Express, react-router. Common use of UI Libraries: Bootstrap 4, React-Bootstrap. There is still more to come in the future so watch out for that.
 							</p>
 							<Button variant="outline-primary">Resume</Button>
 						</div>
@@ -276,32 +272,29 @@ export default class LandingPage extends React.Component {
 						</span>
 
 						<div className="formWrapper">
-						<Form onSubmit={this.handleSubmit}>
-					<Form.Row>
-						<Form.Group style={{ marginRight:"20px"}} controlId="formGridFirstName">
-						<Form.Label>First Name</Form.Label>
-						<Form.Control  type="text"  onChange={this.handleChange} name="firstname"  placeholder="Enter First Name" />
+						<Form onSubmit={this.handleSubmit} style={{color:"darkslategrey"}}>
+				
+						<Form.Group style={{ marginRight:"20px", width:"300px"}} controlId="formGridFirstName">
+						{/* <Form.Label>First Name</Form.Label> */}
+						<Form.Control  type="text"  onChange={this.handleChange} name="name"  placeholder="Enter Name" />
 						</Form.Group>
 
-						<Form.Group  controlId="formGridLastName">
-						<Form.Label>Last Name</Form.Label>
-						<Form.Control type="text"  onChange={this.handleChange} name="lastname" value={this.state.lastname} placeholder="Enter Last Name" />
-						</Form.Group>
-					</Form.Row>
+					
+				
 
 					<Form.Group controlId="formGridSubject">
-						<Form.Label>Subject</Form.Label>
+						{/* <Form.Label>Subject</Form.Label> */}
 						<Form.Control style={{width:"400px"}}  onChange={this.handleChange}value={this.state.subject} name="subject" placeholder="Enter subject" />
 					</Form.Group>
 
 					<Form.Group controlId="formGridSubjectDetails">
-						<Form.Label>Subject Details</Form.Label>
+						{/* <Form.Label>Subject Details</Form.Label> */}
 						<br />
-						<textarea name="message" onChange={this.handleChange} value={this.state.message} rows="5" cols="70"></textarea> 
+						<textarea name="message" onChange={this.handleChange} value={this.state.message} rows="5" cols="70" placeholder="Enter message"></textarea> 
 					</Form.Group>
 
 
-					<Button variant="danger" type="submit">
+					<Button variant="outline-danger" type="submit">
 						Send
 					</Button>
 					</Form>
