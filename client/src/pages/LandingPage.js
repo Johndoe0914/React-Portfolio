@@ -14,6 +14,8 @@ import ScrollAnimation from "react-animate-on-scroll"
 import "animate.css/animate.min.css"
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import CardList from "../components/CardList/Card-List";
+import ScrollSpy from 'react-scrollspy';
 
 
 
@@ -166,9 +168,14 @@ export default class LandingPage extends React.Component {
 				<nav  className="navbar  navbar-black bg-black  navbar-expand-lg">
 			
 			<div className="scrollspy">
-			<a className="navbar-brand" href="#about">About</a>
+				<ScrollSpy items={['about', 'portfolio', 'resume']} currentClassName="is-current">
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#resume">Resume</a></li>
+				</ScrollSpy>
+			{/* <a className="navbar-brand" href="#about">About</a>
 			<a className="navbar-brand" href="#portfolio">Portfolio</a>
-			<a className="navbar-brand" href="#resume">Resume</a>
+			<a className="navbar-brand" href="#resume">Resume</a> */}
 			</div>
 			
 			</nav>
@@ -238,9 +245,11 @@ export default class LandingPage extends React.Component {
                  
 				  <Row>
 					  <Col size="12">
-						{this.state.reactVisible ? <ProjectCarousel projects={reactJS}/> : null}
-						{this.state.nodeVisible ? <ProjectCarousel projects={nodeJS}/> : null}
-						{this.state.htmlVisible ? <ProjectCarousel projects={htmlJs}/> : null}
+						<div className="projectContainer">
+						{this.state.reactVisible ?<CardList projects={reactJS}/> : null}
+						 {this.state.nodeVisible ? <CardList projects={nodeJS}/>: null} 
+						{this.state.htmlVisible ? <CardList projects={htmlJs}/> : null} 
+						</div>
 						
 						
 						  
