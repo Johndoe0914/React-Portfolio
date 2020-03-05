@@ -1,14 +1,4 @@
-@keyframes panning {
-    0% {
-      background-position: 0% 0%;
-    }
-    75% {
-      background-position: 0 100%;
-    }
-    200% {
-      background-position: 0 0;
-    }
-  }
+
 /* .Wrapper {
     position: relative;
     height:700px;
@@ -48,6 +38,7 @@ body {
 .scrollspy {
   position: relative;
   margin: auto;
+  display: inline;
   
 }
 
@@ -70,24 +61,45 @@ body {
   text-decoration: none;
   color: black;
 }
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+  .aboutMe {
+    position: relative;
+    width:1000px;
+    height: auto;
+    background-color: white;
+    margin:  250px auto 200px auto;
+  
+    box-Shadow: 0 3px 6px grey, 0 3px 6px grey; 
+  
+  }
+
+  .aboutHeading{
+    color: red;
+  }
+
+ }
 .aboutMe {
   position: relative;
   width:1000px;
   height: auto;
-  background-color: white;
   margin:  250px auto 200px auto;
-
-  box-Shadow: 0 3px 6px grey, 0 3px 6px grey; 
+  color: white;
 
  
 }
 
 .aboutPic {
-  display:inline-block ;
-  margin: 45px;
+  position: relative;
   border-Radius: 300px;
   height: 300px ;
   box-Shadow: 0 3px 6px #999 0 3px 6px #999;
+  text-align: center;
+
  
 }
 
@@ -108,8 +120,9 @@ body {
 .projectsWrapper {
   position: relative;
   width: 100%;
-  height: 850px;
- background: linear-gradient(-30deg,lightsteelblue 50%, black 50%);
+  height: 1000px;
+ background: linear-gradient(-30deg,black 50%, lightsteelblue 50%);
+ 
  
   
 }
@@ -126,8 +139,13 @@ body {
 }
 .projectContainer {
   position: relative;
-  display: inline-flex;
-  overflow-wrap: normal;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 50px;
+  justify-items: center;
+  margin-top: 50px;
+  
+  
 }
 
 .navTabs {
@@ -143,10 +161,10 @@ body {
    margin:auto ;
    text-align: center;
   margin-Top:50px ;
-  width: 900px ;
+  width: 100% ;
   height:600px;
-  box-Shadow: 0 3px 6px black, 0 3px 6px black; 
-  background-Color: white
+  
+  
 
  
 }

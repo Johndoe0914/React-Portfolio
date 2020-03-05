@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col , Row } from "../components/Grid/index";
+import { Container, Col , Row } from "react-bootstrap";
 // import Navbar from "../components/NavBar";
 import htmlJs from "../htmlJavascript.json";
 import nodeJS from "../nodeJS.json";
@@ -27,10 +27,10 @@ export default class LandingPage extends React.Component {
             super(props)
 
             this.state = {
-				htmlVisible: false,
+				htmlVisible: true,
             javascriptVisible: false,
             handlebarsVisible: false,
-            reactVisible : true,
+            reactVisible : false,
 			nodeVisible: false,
 			msgSent: false,
 			name:"",
@@ -148,7 +148,7 @@ export default class LandingPage extends React.Component {
 	}} /></div>
                 
 				<ScrollAnimation delay={500} animateIn="fadeIn" >
-				<div className="Text" style={{}}>
+				<div className="Text" >
                 
 				<strong><h1>Welcome Stranger,</h1></strong>
 				<br />
@@ -168,42 +168,38 @@ export default class LandingPage extends React.Component {
 				<nav  className="navbar  navbar-black bg-black  navbar-expand-lg">
 			
 			<div className="scrollspy">
-				<ScrollSpy items={['about', 'portfolio', 'resume']} currentClassName="is-current">
-					<li><a href="#about">About</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#resume">Resume</a></li>
-				</ScrollSpy>
-			{/* <a className="navbar-brand" href="#about">About</a>
+			
+			<a className="navbar-brand" href="#about">About</a>
 			<a className="navbar-brand" href="#portfolio">Portfolio</a>
-			<a className="navbar-brand" href="#resume">Resume</a> */}
+			<a className="navbar-brand" href="#resume">Resume</a>
 			</div>
 			
 			</nav>
   			 </div>
                 </div>
 
-
+				<ScrollAnimation 
+					delay={100} animateIn="fadeIn"
+					animateOut='bounceOutLeft'>
 				<div id="about"className="AboutWrapper">
 					<span className="aboutHeading">
 					<h1>About</h1>
 					</span>
 					
-                <ScrollAnimation 
-					delay={100} animateIn="fadeIn"
-					animateOut='bounceOutLeft'>
+              
 				   <div className="aboutMe">
 					<Row>
-					<Col size="sm-2 md-4 lg-6">
+					<Col >
 						<div className="aboutPic">
-					<img  className="img-fluid"style={{ display:"inline-block", margin:"45px",borderRadius:"300px", height:"300px", width:"300px" ,boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="baby giraffe" src="https://i.imgur.com/7TgLRdo.jpg?1" />
+					<img  className="img-fluid"style={{borderRadius:"300px", height:"300px", width:"300px" ,boxShadow: "0 3px 6px #999, 0 3px 6px #999"}}alt="baby giraffe" src="https://i.imgur.com/7TgLRdo.jpg?1" />
 					</div></Col>
 					
-					<Col size="6">
+					<Col xs={12} >
                     <div className="aboutDesc"> Welcome to my portfolio, My name is Jonathan Diaz i am 20 years old and also a UCF Coding bootcamp graduate .I currently reside in Kissimmee, Florida. I am a young motivated individual who wants to strive and do his best in everything he does. I would describe myself as being a proactive ,dynamic and a team player. My goal is to find a great company i can work for to further develop my skills as a developer and gain experience as i work. I am also always seeking to expand on my current knowledge base. Feel free to email me down below !  </div>
                     </Col>
 					</Row>
 					<Row>
-						<Col size="12">
+						<Col >
 						<span className="langHeading">
 						<h4>Familiar with</h4>
 					</span>
@@ -220,18 +216,20 @@ export default class LandingPage extends React.Component {
 						</Col>
 					</Row>
 					</div>
-					</ScrollAnimation>
+					
 				   
                    
 				</div>
+				</ScrollAnimation>
 
+				<ScrollAnimation animateIn='fadeIn' animateOut="fadeOut">
+		
 				<div id="portfolio" className="projectsWrapper">
 						<span className = "projectHeading">
 						<h1>Projects</h1>
 						</span>
 					
-			<ScrollAnimation animateIn='fadeIn' animateOut="fadeOut">
-								
+							
 			<div className="projectDisplay">
 								<Row>
 									<Col size="12">
@@ -258,11 +256,12 @@ export default class LandingPage extends React.Component {
 					  </Col>
 				  </Row>
               </div>
-			</ScrollAnimation>
+
 						
 				</div>
+				</ScrollAnimation>
 
-				<div id="resume"className="myOfferWrapper">
+				{/* <div id="resume"className="myOfferWrapper">
 				<span className = "offerHeading">
 							<h1>What can i offer?</h1>
 						</span>
@@ -272,7 +271,7 @@ export default class LandingPage extends React.Component {
 							</p>
 							<Button variant="outline-primary">Resume</Button>
 						</div>
-				</div>
+				</div> */}
 
 				<div className="contactWrapper">
 				<span className = "contactHeading">
